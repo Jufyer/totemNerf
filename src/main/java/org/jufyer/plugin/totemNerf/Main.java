@@ -1,6 +1,7 @@
 package org.jufyer.plugin.totemNerf;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jufyer.plugin.totemNerf.commands.GivePotion;
 import org.jufyer.plugin.totemNerf.commands.SetMaxTotems;
 import org.jufyer.plugin.totemNerf.listeners.PlayerListeners;
 
@@ -19,6 +20,7 @@ public final class Main extends JavaPlugin{
     getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
 
     getCommand("setMaxTotems").setExecutor(new SetMaxTotems());
+    getCommand("givePotion").setExecutor(new GivePotion());
   }
 
   @Override

@@ -38,5 +38,6 @@ bukkitPluginYaml {
   apiVersion = "1.21.4"
   commands {
     register("setMaxTotems")
+    register("givePotion")
   }
 }

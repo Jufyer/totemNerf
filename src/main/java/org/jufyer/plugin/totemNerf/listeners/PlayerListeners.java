@@ -13,6 +13,7 @@ import org.bukkit.event.entity.EntityResurrectEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.inventory.InventoryMoveItemEvent;
+import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.jufyer.plugin.totemNerf.Main;
@@ -111,6 +112,16 @@ public class PlayerListeners implements Listener {
       player.getAttribute(Attribute.MAX_HEALTH).setBaseValue(currentMaxHealth - 2);
 
       player.sendMessage("§cYour max health has been reduced by 1 due to the use of Totem of Undying.");
+    }
+  }
+
+  @EventHandler
+  public void onPlayerItemConsume(PlayerItemConsumeEvent event) {
+    ItemStack itemStack = event.getItem();
+    if (itemStack.getType().equals(Material.POTION)){
+      if (itemStack.getItemMeta().getCustomModelData() == 123){
+
+      }
     }
   }
 }
