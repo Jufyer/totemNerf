@@ -1,11 +1,20 @@
 package org.jufyer.plugin.totemNerf;
 
+import org.bukkit.Color;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jufyer.plugin.totemNerf.brewing.BrewingControler;
+import org.jufyer.plugin.totemNerf.brewing.BrewingRecipe;
 import org.jufyer.plugin.totemNerf.commands.GivePotion;
 import org.jufyer.plugin.totemNerf.commands.SetMaxTotems;
 import org.jufyer.plugin.totemNerf.listeners.PlayerListeners;
 
 import java.io.*;
+import java.util.Arrays;
 
 public final class Main extends JavaPlugin{
   private static Main instance;
@@ -14,6 +23,8 @@ public final class Main extends JavaPlugin{
     return instance;
   }
 
+  public static BrewingControler bc;
+
   @Override
   public void onEnable() {
     instance = this;
@@ -21,11 +32,35 @@ public final class Main extends JavaPlugin{
 
     getCommand("setMaxTotems").setExecutor(new SetMaxTotems());
     getCommand("givePotion").setExecutor(new GivePotion());
+
+    addBrewingRecipie();
   }
 
   @Override
   public void onDisable(){
 
+  }
+
+  public static void addBrewingRecipie() {
+    ItemStack resetPotion = new ItemStack(Material.POTION);
+    resetPotion.setAmount(1);
+    ItemMeta meta = resetPotion.getItemMeta();
+    meta.setCustomModelData(123);
+    meta.setDisplayName("§rPotion of Purification");
+    meta.setLore(Arrays.asList("§aSet's your maximum Health back to 10 Hearts."));
+    ((PotionMeta) meta).setColor(Color.LIME);
+
+    resetPotion.setItemMeta(meta);
+
+    bc = new BrewingControler(Main.getInstance());
+    BrewingRecipe recipe = new BrewingRecipe(
+      new NamespacedKey(Main.getInstance(), "customPotion"),
+      resetPotion,
+      new ItemStack(Material.GOLDEN_APPLE),
+      new ItemStack(Material.GLASS_BOTTLE)
+    );
+    //Main.getInstance().getLogger().info(recipe.toString());
+    bc.addRecipe(recipe);
   }
 
   public static void setMaxTotemsFile(int numberOfTotems) {
@@ -62,7 +97,7 @@ public final class Main extends JavaPlugin{
         throw new RuntimeException(e);
       }
     } catch (FileNotFoundException e) {
-      throw new RuntimeException(e);
+      maxTotems = 1;
     }
 
     return maxTotems;

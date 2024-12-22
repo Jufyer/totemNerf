@@ -16,6 +16,8 @@ public class SetMaxTotems implements CommandExecutor {
         Main.setMaxTotemsFile(maxTotems);
         sender.sendMessage("§cYou set the maximum Amount of Totems a Player can have at the same time in their inventory to " + maxTotems);
       }
+    }else {
+      sender.sendMessage("§cYou don't have the permission to do this!");
     }
 
     return false;
