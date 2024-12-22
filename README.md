@@ -19,12 +19,14 @@ To use the Totem of Undying, you must have one Golden Apple in your inventory. I
 
 <p align="center"><img src="https://imgur.com/O7iEkya.gif"></p>
 
+And if you use your Totem of Undying you lose one Heart of you maximum Health. If you want to get this heart back you need to drink this Potion:
+
 ### New Potion System
 <p align="center"><img src="https://imgur.com/ac0Bf2J.png"></p>
 <p align="center"><img src="https://imgur.com/z3Ct1KV.png"></p>
 <p align="center"><img src="https://imgur.com/dmJ3PJf.png"></p>
 
-The new brewing process for potions involved in the plugin.
+The new brewing process for potions involved in the plugin. If you drink this Potion your maximum Health is set to 10 hearts.
 
 ### Limited Number of Totems
 <p align="center"><img src="https://imgur.com/aT467rX.png"></p>
