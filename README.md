@@ -1,6 +1,6 @@
 # Totem Nerf Minecraft Plugin
 
-This Minecraft Plugin rebalances the **Totem of Undying**. The same project is available on [`Modrinth`](https://modrinth.com/plugin/whales).
+This Minecraft Plugin rebalances the **Totem of Undying**. The same project is available on [`Modrinth`](https://modrinth.com/plugin/totem-nerf).
 
 ## Installation
 
@@ -12,18 +12,21 @@ You can download the latest release from the [`GitHub Releases page`](https://gi
 ## Features
 
 ### Totem of Undying Consumes 1 Golden Apple
-<p align="center"><img src="https://imgur.com/sNks9LV.gif"></p>
+
+<p align="center"><img src="works.gif"></p>
 
 To use the Totem of Undying, you must have one Golden Apple in your inventory. If you don’t have one, the Totem will fail to activate, showing this animation:
 
 <p align="center"><img src="https://imgur.com/O7iEkya.gif"></p>
+
+And if you use your Totem of Undying you lose one Heart of you maximum Health. If you want to get this heart back you need to drink this Potion:
 
 ### New Potion System
 <p align="center"><img src="https://imgur.com/ac0Bf2J.png"></p>
 <p align="center"><img src="https://imgur.com/z3Ct1KV.png"></p>
 <p align="center"><img src="https://imgur.com/dmJ3PJf.png"></p>
 
-The new brewing process for potions involved in the plugin.
+The new brewing process for potions involved in the plugin. If you drink this Potion your maximum Health is set to 10 hearts.
 
 ### Limited Number of Totems
 <p align="center"><img src="https://imgur.com/aT467rX.png"></p>
