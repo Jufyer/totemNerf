@@ -12,6 +12,7 @@ You can download the latest release from the [`GitHub Releases page`](https://gi
 ## Features
 
 ### Totem of Undying Consumes 1 Golden Apple
+
 <p align="center"><img src="https://imgur.com/sNks9LV.gif"></p>
 
 To use the Totem of Undying, you must have one Golden Apple in your inventory. If you don’t have one, the Totem will fail to activate, showing this animation:
