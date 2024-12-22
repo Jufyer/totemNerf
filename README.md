@@ -1,6 +1,6 @@
 # Totem Nerf Minecraft Plugin
 
-This Minecraft Plugin rebalances the **Totem of Undying**. The same project is available on [`Modrinth`](https://modrinth.com/plugin/whales).
+This Minecraft Plugin rebalances the **Totem of Undying**. The same project is available on [`Modrinth`][https://modrinth.com/plugin/totem-nerf).
 
 ## Installation
 
