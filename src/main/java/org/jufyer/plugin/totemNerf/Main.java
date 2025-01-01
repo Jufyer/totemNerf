@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionType;
 import org.jufyer.plugin.totemNerf.brewing.BrewingControler;
 import org.jufyer.plugin.totemNerf.brewing.BrewingRecipe;
 import org.jufyer.plugin.totemNerf.commands.GivePotion;
@@ -52,12 +53,17 @@ public final class Main extends JavaPlugin{
 
     resetPotion.setItemMeta(meta);
 
+    ItemStack bottle = new ItemStack(Material.POTION, 1);
+    PotionMeta pmeta = (PotionMeta) bottle.getItemMeta();
+    pmeta.setBasePotionType(PotionType.WATER);
+    bottle.setItemMeta(pmeta);
+
     bc = new BrewingControler(Main.getInstance());
     BrewingRecipe recipe = new BrewingRecipe(
       new NamespacedKey(Main.getInstance(), "customPotion"),
       resetPotion,
       new ItemStack(Material.GOLDEN_APPLE),
-      new ItemStack(Material.GLASS_BOTTLE)
+      bottle
     );
     //Main.getInstance().getLogger().info(recipe.toString());
     bc.addRecipe(recipe);
