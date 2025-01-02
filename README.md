@@ -41,4 +41,4 @@ Ensure to update any relevant tests when making changes.
 
 ## License
 
-This project is licensed under the [`GNU General Public License Version 3`](https://github.com/Jufyer/Whales/blob/master/LICENSE).
+This project is licensed under the [`GNU General Public License Version 3`](https://github.com/Jufyer/totemNerf/blob/master/LICENSE.txt).
